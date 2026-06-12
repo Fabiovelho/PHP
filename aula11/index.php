@@ -13,12 +13,15 @@
         exit;
     }
 
-    if($usuario =="Mauricio" && $senha = "123a"){
+    if($nome =="Mauricio" && $senha = "123a"){
 
-    $_session['logado'] = TRUE;
+    $_SESSION['logado'] = TRUE;
     header("location: home.php");
 
     }else{
+        
+    echo "<script> alert('usuario ou senha incorreto');window.location.href='index.php'; </script>";
+        exit;
         
     }
  }
@@ -70,7 +73,7 @@
 
 
             <div class="col-md-12">
-              <button class="btn btn-primary" style="width: 100%; background-color: red; margin-top: 3%" name:btn >Logar</button> 
+              <button class="btn btn-primary" style="width: 100%; background-color: red; margin-top: 3%" name="btn" >Logar</button> 
 
             </div>
         </div>

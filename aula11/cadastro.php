@@ -1,4 +1,13 @@
+<?php
+ session_start();
 
+    if($_SESSION['logado'] == FALSE){
+
+    echo "<script> alert('por favor, faça o login');window.location.href='index.php'; </script>";
+    exit;
+    }
+
+?>
 
 
 
